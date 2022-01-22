@@ -1,0 +1,45 @@
+.event-search-list-container {
+	@media #{$sm},#{$md},#{$lg} {
+		@include event-list;
+		grid-template-columns: repeat(3, 1fr);
+		position: absolute;
+		left: 15%;
+		top: 20vh;
+	}
+	@media #{$sm} {
+	}
+	@media #{$md} {
+	}
+	@media #{$lg} {
+	}
+}
+.event-page-list-container {
+	@media #{$sm},#{$md},#{$lg} {
+		@include event-list;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.event-0 {
+		grid-area: one;
+		color: red;
+	}
+
+	.event-1 {
+		grid-area: two;
+	}
+
+	.event-2 {
+		grid-area: three;
+	}
+
+	.event-3 {
+		grid-area: four;
+	}
+
+	.event-4 {
+		grid-area: five;
+	}
+
+	.event-5 {
+		grid-area: six;
+	}
+}

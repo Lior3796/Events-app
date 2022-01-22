@@ -1,0 +1,87 @@
+.form-container {
+	position: relative;
+	margin: 0;
+	height: 60%;
+	max-height: 70vh;
+	width: 20%;
+	min-width: 300px;
+	background-image: transparent;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	box-shadow: 0px 10px 10px grey;
+	border-radius: 10px;
+	font-family: "Assistant", sans-serif;
+	font-weight: 900;
+}
+.form-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+	filter: blur(10px);
+}
+
+.form-header {
+	position: absolute;
+	top: 0;
+}
+.login-container {
+	width: 100%;
+	height: 100%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.userName-input,
+.userPassword-input {
+	border: none;
+	border-radius: 10px;
+	height: 30px;
+	width: 70%;
+	outline: none;
+	z-index: 1;
+}
+.form-login-btn {
+	background-image: linear-gradient(
+		33deg,
+		rgb(0, 178, 233),
+		rgba(255, 255, 255, 0.705)
+	);
+
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: block;
+	font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+		Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing: -0.022em;
+	line-height: 1.47059;
+	width: 60%;
+	min-width: 50px;
+	overflow: visible;
+	padding: 4px 15px;
+	text-align: center;
+	vertical-align: baseline;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	position: absolute;
+	bottom: 35px;
+}
+.skip {
+	bottom: 2px;
+	font-size: 1.4rem;
+	background-image: linear-gradient(33deg, rgb(0, 178, 233), rgb(0, 0, 0));
+	height: 4vh;
+}

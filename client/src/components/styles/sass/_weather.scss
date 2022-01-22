@@ -1,0 +1,10 @@
+.weather-container {
+	@media #{$sm},#{$lg},#{$md} {
+		@include flex-center(column, space-around);
+		width: 100%;
+		position: absolute;
+		top: 0;
+		height: 150vh;
+		border: $border;
+	}
+}

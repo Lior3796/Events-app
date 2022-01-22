@@ -1,0 +1,16 @@
+.ForecastsCard-container {
+	max-width: 350px;
+}
+.ForecastsCard {
+	width: 80%;
+	min-height: 170px;
+	max-width: 350px;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 10px 10px 10px 10px black;
+}
+
+.card-content {
+	width: 60%;
+	font-family: "Assistant";
+}

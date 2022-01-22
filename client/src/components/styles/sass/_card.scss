@@ -1,0 +1,17 @@
+// Add responsive
+.forecasts-map-container {
+	@include flex-center(row, space-around);
+	width: 100%;
+	flex: 1.4;
+
+	.favoriteCard {
+		* > div {
+			height: 7rem;
+		}
+		width: 30%;
+		border: $border;
+		max-height: 300px;
+		max-width: 250px;
+		@include flex-center(column);
+	}
+}
