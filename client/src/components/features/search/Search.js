@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import { isValidValue } from '../../utills/Index';
-import { getEvents, getEventByAttraction } from '../../service/service';
+import { getEvents, getEventByAttraction, getClassifactionId } from '../../service/service';
 import { SingleEvent } from '../../singleEvent.js/SingleEvent';
 import { DatePicker } from '../datePicker/DatePicker';
 export const Search = () => {
@@ -18,15 +18,17 @@ export const Search = () => {
     }
     const getAttractions = async () => {
         try {
-            let events = await getEventByAttraction(keyword);
-            events = events._embedded.attractions;
-            const mapAttractionToEvent = await getEvents(keyword, events[0].id);
-            const result = (
-                <div className="event-search-list-container" >
-                    {events.map((item, index) => <SingleEvent index={index} id={item.id} event={item} />)}
-                </div>
-            )
-            setMapEvents(result);
+            const getClassifaction = await getClassifactionId("music");
+            console.log(getClassifaction);
+            // let events = await getEventByAttraction(keyword);
+            // events = events._embedded.attractions;
+            // const mapAttractionToEvent = await getEvents(keyword, events[0].id);
+            // const result = (
+            //     <div className="event-search-list-container" >
+            //         {events.map((item, index) => <SingleEvent index={index} id={item.id} event={item} />)}
+            //     </div>
+            //             )
+            // setMapEvents(result);
 
         }
         catch (e) {

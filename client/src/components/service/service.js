@@ -20,7 +20,7 @@ export const getEventByAttraction = (keyword, startDateTime, endDateTime) => {
 }
 
 export const getClassifactionId = (keyword, classificationId) => {
-    return fetch(`https://app.ticketmaster.com/discovery/v2/attractions?apikey=iC4amkhAqGNtW5dAuGGYS0lwGTb0y8SY&keyword=${keyword}&locale=*&classificationId=${classificationId}`)
+    return fetch(`https://app.ticketmaster.com/discovery/v2/classifications?apikey=iC4amkhAqGNtW5dAuGGYS0lwGTb0y8SY&keyword=${keyword}&locale=*`)
         .then(attraction => attraction.json())
         .catch(err => console.log(err))
 }
