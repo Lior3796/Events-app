@@ -1,9 +1,8 @@
 .event-search-list-container {
 	@media #{$sm},#{$md},#{$lg} {
-		@include event-list;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(9, 1fr);
+		width: 70%;
 		position: absolute;
-		left: 15%;
 		top: 20vh;
 	}
 	@media #{$sm} {

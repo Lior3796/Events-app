@@ -10,8 +10,15 @@ export const Events = () => {
 
 
     const showEvent = async () => {
-        const result = await getEventByAttraction("pop");
-        setEvents(result._embedded.attractions);
+        try {
+            const result = await getEventByAttraction("Lil ", "", "", "KZFzniwnSyZfZ7v7nJ");
+            setEvents(result._embedded.attractions);
+            console.log(events);
+
+
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     const eventList = events?.map((item, index) => <SingleEvent index={index} id={item.id} event={item} />);

@@ -1,20 +1,18 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/style.css';
 import { useDispatch } from 'react-redux';
 import { Search } from '../features/search/Search';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Sidebar from '../features/sidebar/Sidebar';
 export const Weather = () => {
-    const dispatch = useDispatch();
 
-    useEffect(() => {
 
-    }, [])
 
     return (
-        <div className="weather-container">
+        <div className="search-page-container">
+            <Sidebar />
             <Search />
+
         </div>
     )
 }

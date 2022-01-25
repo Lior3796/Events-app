@@ -92,16 +92,10 @@
 
 @media (min-width: 0px) and (max-width: 460px), (min-width: 461px) and (max-width: 720px), (min-width: 721px) {
   .event-search-list-container {
-    display: -ms-grid;
-    display: grid;
+    -ms-grid-rows: (1fr)[9];
+        grid-template-rows: repeat(9, 1fr);
     width: 70%;
-    margin: auto;
-    height: auto;
-    gap: 10px;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
     position: absolute;
-    left: 15%;
     top: 20vh;
   }
 }
@@ -150,22 +144,13 @@
 }
 
 @media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
-  .weather-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .search-page-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
     width: 100%;
-    position: absolute;
-    top: 0;
+    position: relative;
     height: 150vh;
     border: 1px solid black;
   }
@@ -667,11 +652,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-flex: 0.39;
-        -ms-flex: 0.39;
-            flex: 0.39;
     width: 100%;
-    height: 100%;
     margin: 1.7rem;
   }
 }
@@ -707,7 +688,7 @@
 @media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
   .search-bar {
     min-height: 40px;
-    width: 100%;
+    width: 50%;
     padding-top: 15px;
     position: absolute;
     top: 10vh;
@@ -733,8 +714,23 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #ffc107;
+  background-color: #2c2c2c;
   color: #fff;
+}
+
+.search-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.datePicker-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .forecasts-map-container {
